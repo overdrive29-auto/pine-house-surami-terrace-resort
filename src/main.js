@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import router from './router'
+import i18n from './locales/i18n'
 
 // PrimeVue
 import PrimeVue from 'primevue/config'
@@ -9,6 +10,7 @@ import { definePreset } from '@primeuix/themes'
 import Aura from '@primeuix/themes/aura'
 import Button from 'primevue/button'
 import Menubar from 'primevue/menubar'
+import Menu from 'primevue/menu'
 
 import 'primeicons/primeicons.css'
 
@@ -50,9 +52,11 @@ app.use(PrimeVue, {
   },
   ripple: true,
 })
+app.use(i18n)
 
 app
     .component('Button', Button)
     .component('Menubar', Menubar)
+    .component('Menu', Menu)
 
 app.mount('#app')
