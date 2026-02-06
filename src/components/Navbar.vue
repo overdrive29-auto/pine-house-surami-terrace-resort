@@ -3,7 +3,7 @@
         <Menubar :model="items">
             <template #start>
                 <router-link to="/" activeClass="" exactActiveClass="">
-                    <span class="text-primary-400 text-2xl permanent-marker-regular px-3">PHSTR.com</span>
+                    <span class="text-2xl permanent-marker-regular px-3">Pine House & Surami Terrace Resort</span>
                 </router-link>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
@@ -41,8 +41,6 @@
                     </Menu>
                     <Button :icon="phstrAppDark ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary"
                         aria-label="Theme" @click="toggleDarkMode()" />
-                    <!-- <Button icon="pi pi-palette" variant="outlined" severity="secondary" aria-label="Theme"
-                        @click="toggleGrayScaleMode()" /> -->
                     <Button icon="pi pi-user" type="button" variant="outlined" severity="secondary" aria-haspopup="true"
                         aria-controls="user_account_overlay_dropdown_menu" @click="toggleUserAccountDropdownMenu"
                         disabled />
@@ -57,7 +55,6 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-// import { updatePrimaryPalette } from '@primeuix/themes'
 
 const { t, locale } = useI18n();
 
@@ -75,17 +72,17 @@ const items = ref([
         route: '/about',
         disabled: false
     },
+        {
+        label: 'navlinks.gallery',
+        icon: 'pi pi-images',
+        route: '/gallery',
+        disabled: false
+    },
     {
         label: 'navlinks.contact',
         icon: 'pi pi-envelope',
         route: '/contact',
         disabled: false
-    },
-    {
-        label: 'navlinks.gallery',
-        icon: 'pi pi-images',
-        route: '/gallery',
-        disabled: true
     },
 ]);
 
@@ -93,7 +90,7 @@ const items = ref([
 const phstrAppDark = ref(true);
 
 function toggleDarkMode() {
-    document.documentElement.classList.toggle('yd-app-dark');
+    document.documentElement.classList.toggle('phstr-app-dark');
     phstrAppDark.value = !phstrAppDark.value;
 }
 

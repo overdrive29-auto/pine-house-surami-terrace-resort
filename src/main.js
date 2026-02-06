@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
 import router from './router'
 import i18n from './locales/i18n'
@@ -11,6 +10,8 @@ import Aura from '@primeuix/themes/aura'
 import Button from 'primevue/button'
 import Menubar from 'primevue/menubar'
 import Menu from 'primevue/menu'
+import Ripple from 'primevue/ripple'
+import Tooltip from 'primevue/tooltip'
 
 import 'primeicons/primeicons.css'
 
@@ -58,5 +59,8 @@ app
     .component('Button', Button)
     .component('Menubar', Menubar)
     .component('Menu', Menu)
+
+app.directive('ripple', Ripple).directive('tooltip', Tooltip)
+
 
 app.mount('#app')
