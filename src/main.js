@@ -12,6 +12,9 @@ import Menubar from 'primevue/menubar'
 import Menu from 'primevue/menu'
 import Ripple from 'primevue/ripple'
 import Tooltip from 'primevue/tooltip'
+import IconField from 'primevue/iconfield';
+import InputIcon from 'primevue/inputicon';
+import InputText from 'primevue/inputtext';
 
 import 'primeicons/primeicons.css'
 
@@ -59,6 +62,9 @@ app
     .component('Button', Button)
     .component('Menubar', Menubar)
     .component('Menu', Menu)
+    .component('IconField', IconField)
+    .component('InputIcon', InputIcon)
+    .component('InputText', InputText)
 
 app.directive('ripple', Ripple).directive('tooltip', Tooltip)
 

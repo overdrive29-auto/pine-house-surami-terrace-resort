@@ -2,9 +2,98 @@
     <div id="navbar" class="card">
         <Menubar :model="items">
             <template #start>
-                <router-link to="/" activeClass="" exactActiveClass="">
+                <!-- <router-link to="/" activeClass="" exactActiveClass="">
                     <span class="text-2xl permanent-marker-regular px-3">Pine House & Surami Terrace Resort</span>
-                </router-link>
+                </router-link> -->
+<svg
+class="m-4"
+   width="61.999245"
+   height="26"
+   viewBox="0 0 61.999245 26"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-1.0007566,-19)">
+    <path
+       id="path1"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="M 62.250034,44.25 C 59.16669,36.083287 56.083345,27.916575 52.999999,19.749863 49.916655,27.916575 46.833312,36.083288 43.749966,44.25 c 6.166689,0 12.333379,0 18.500068,0 z" />
+    <path
+       id="path1-5"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="M 41.362664,44.25 C 38.279319,36.083287 35.195975,27.916575 32.11263,19.749862 29.029286,27.916575 25.945941,36.083287 22.862597,44.25 c 6.166689,0 12.333378,0 18.500067,0 z" />
+    <path
+       id="rect1"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 51.5,28.5 c 0,1 0,2 0,3 1,0 2,0 3,0 0,-1 0,-2 0,-3 -1,0 -2,0 -3,0 z" />
+    <path
+       id="rect1-3"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 30.5,28.5 c 0,1 0,2 0,3 1,0 2,0 3,0 0,-1 0,-2 0,-3 -1,0 -2,0 -3,0 z" />
+    <path
+       id="rect1-0"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 54.5,36.5 c 0,1 0,2 0,3 1,0 2,0 3,0 0,-1 0,-2 0,-3 -1,0 -2,0 -3,0 z" />
+    <path
+       id="rect1-0-5"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 48.5,36.5 c 0,2.666667 0,5.333333 0,8 0.833333,0 1.666667,0 2.5,0 0,-2.666667 0,-5.333333 0,-8 -0.833333,0 -1.666667,0 -2.5,0 z" />
+    <path
+       id="rect1-0-5-1"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 34,36.5 c 0,2.666667 0,5.333333 0,8 0.833333,0 1.666667,0 2.5,0 0,-2.666667 0,-5.333333 0,-8 -0.833333,0 -1.666667,0 -2.5,0 z" />
+    <path
+       id="rect1-0-7"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 27.5,36.5 c 0,1 0,2 0,3 1,0 2,0 3,0 0,-1 0,-2 0,-3 -1,0 -2,0 -3,0 z" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 48.752509,31 c -4.130795,0 -8.261589,0 -12.392384,0"
+       id="path2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 42.5,31 c 0,4.666667 0,9.333334 0,14.000001"
+       id="path3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="m 13,20 c 0,8.333333 0,16.666667 0,25"
+       id="path4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="M 5.8873005,34.0805 C 9.0214605,34.266377 12.311743,32.15053 13,29"
+       id="path6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="M 20.1127,34.0805 C 16.97854,34.266376 13.688258,32.15053 13,29"
+       id="path6-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="M 23.935666,40.249481 C 19.293333,40.472828 13.997069,37.903493 12.981037,33.008568"
+       id="path7-7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="M 1.032388,40.496948 C 5.9572825,40.704841 11.799594,38.239329 13,33"
+       id="path7-7-2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="M 8.935601,28.128806 C 12.584592,27.403383 12.855611,22.966325 13,20"
+       id="path8" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none"
+       d="M 17.0644,28.128797 C 13.415402,27.403389 13.144392,22.96632 13,20"
+       id="path8-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:2"
+       d="m 41.362664,44.25 c 0.795767,0 1.591535,0 2.387302,0"
+       id="path5" />
+  </g>
+</svg>
+
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
                 <router-link v-if="item.route" v-slot="{ href, navigate, isActive, isExactActive }" :to="item.route"
@@ -28,6 +117,10 @@
             </template>
             <template #end>
                 <div class="flex items-center gap-2">
+                    <IconField>
+                        <InputIcon class="pi pi-search" />
+                        <InputText v-model="value1" placeholder="Booking ID" />
+                    </IconField>
                     <Button type="button" variant="outlined" id="language_switch_button" class="p-button-icon-only"
                         severity="secondary" aria-haspopup="true" aria-controls="language_switch_dropdown_menu"
                         @click="toggleLanguageSwitchDropdownMenu">
@@ -41,11 +134,6 @@
                     </Menu>
                     <Button :icon="phstrAppDark ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary"
                         aria-label="Theme" @click="toggleDarkMode()" />
-                    <Button icon="pi pi-user" type="button" variant="outlined" severity="secondary" aria-haspopup="true"
-                        aria-controls="user_account_overlay_dropdown_menu" @click="toggleUserAccountDropdownMenu"
-                        disabled />
-                    <!-- <Menu ref="userAccountDropdownMenu" id="user_account_overlay_dropdown_menu"
-                        :model="userAccountDropdownMenuItems" :popup="true" /> -->
                 </div>
             </template>
         </Menubar>
@@ -109,24 +197,6 @@ const toggleLanguageSwitchDropdownMenu = (event) => {
 };
 
 const selectLanguage = (code) => { locale.value = code };
-
-// // User account dropdown menu
-// const userAccountDropdownMenu = ref();
-// const userAccountDropdownMenuItems = ref([
-//     {
-//         label: 'nikoloz.u@gmail.com',
-//         items: [
-//             { label: computed(() => t('account')), icon: 'pi pi-user', },
-//             { label: computed(() => t('orderHistory')), icon: 'pi pi-history', },
-//             { label: computed(() => t('cart')), icon: 'pi pi-shopping-cart', },
-//             { label: computed(() => t('signOut')), icon: 'pi pi-sign-out', },
-//         ],
-//     },
-// ]);
-
-// const toggleUserAccountDropdownMenu = (event) => {
-//     userAccountDropdownMenu.value.toggle(event);
-// };
 </script>
 
 <style>
@@ -173,5 +243,10 @@ const selectLanguage = (code) => { locale.value = code };
 
 #user_account_overlay_dropdown_menu_list li:last-child>div>a {
     padding-bottom: 0.75rem;
+}
+
+#svg1 {
+  width: 120px;      /* Scale to 200px wide */
+  height: auto;      /* Maintain aspect ratio */
 }
 </style>
