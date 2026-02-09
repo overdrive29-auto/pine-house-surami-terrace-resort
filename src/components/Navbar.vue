@@ -1,13 +1,12 @@
 <template>
-    <div id="navbar" class="card">
-        <Menubar :model="items">
+    <div id="navbar" class="card h-16">
+        <Menubar :model="items" :pt="{root: { class: 'h-16' },
+    }">
             <template #start>
-                <!-- <router-link to="/" activeClass="" exactActiveClass="">
-                    <span class="text-2xl permanent-marker-regular px-3">Pine House & Surami Terrace Resort</span>
-                </router-link> -->
-                <svg
+                <router-link to="/" activeClass="" exactActiveClass="">
+<svg
                 id="logo"
-                class="m-2"
+                class="m-2 dark:text-color-white"
                 width="62"
                 height="26"
                 viewBox="0 0 62 26"
@@ -70,6 +69,8 @@
                     d="m 40.362285,25.25 c 0.795767,0 1.591535,0 2.387302,0"/>
                 </g>
                 </svg>
+                </router-link>
+                
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
                 <router-link v-if="item.route" v-slot="{ href, navigate, isActive, isExactActive }" :to="item.route"
@@ -97,19 +98,8 @@
                         <InputIcon class="pi pi-search" />
                         <InputText v-model="value1" placeholder="Booking ID" />
                     </IconField>
-                    <Button type="button" variant="outlined" id="language_switch_button" class="p-button-icon-only"
-                        severity="secondary" aria-haspopup="true" aria-controls="language_switch_dropdown_menu"
-                        @click="toggleLanguageSwitchDropdownMenu">
-                        <span :class="`flag-icon flag-icon-${flagMap[locale]}`"></span>
-                    </Button>
-                    <Menu ref="languageSwitchDropdownMenu" id="language_switch_dropdown_menu"
-                        :model="languageSwitchDropdownMenuItems" :popup="true">
-                        <template #item="{ item }">
-                            <span :class="item.icon" />
-                        </template>
-                    </Menu>
-                    <Button :icon="phstrAppDark ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary"
-                        aria-label="Theme" @click="toggleDarkMode()" />
+                    <LanguageSwitch />
+                    <ColorSchemeSwitch />
                 </div>
             </template>
         </Menubar>
@@ -119,6 +109,8 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
+import LanguageSwitch from './LanguageSwitch.vue'
+import ColorSchemeSwitch from './ColorSchemeSwitch.vue'
 
 const { t, locale } = useI18n();
 
@@ -149,30 +141,6 @@ const items = ref([
         disabled: false
     },
 ]);
-
-// Theme switch
-const phstrAppDark = ref(true);
-
-function toggleDarkMode() {
-    document.documentElement.classList.toggle('phstr-app-dark');
-    phstrAppDark.value = !phstrAppDark.value;
-}
-
-// Language switch
-const flagMap = { en: 'gb', ka: 'ge', ru: 'ru' };
-
-const languageSwitchDropdownMenu = ref();
-const languageSwitchDropdownMenuItems = ref([
-    { icon: 'flag-icon flag-icon-gb', command: () => selectLanguage('en') },
-    { icon: 'flag-icon flag-icon-ge', command: () => selectLanguage('ka') },
-    { icon: 'flag-icon flag-icon-ru', command: () => selectLanguage('ru') },
-]);
-
-const toggleLanguageSwitchDropdownMenu = (event) => {
-    languageSwitchDropdownMenu.value.toggle(event);
-};
-
-const selectLanguage = (code) => { locale.value = code };
 </script>
 
 <style>
@@ -211,30 +179,8 @@ const selectLanguage = (code) => { locale.value = code };
     /* } */
 }
 
-.flag-icon {
-    line-height: inherit !important;
-    filter: grayscale(25%);
-}
-
-#language_switch_dropdown_menu {
-    min-width: min-content;
-
-    & div {
-        padding: var(--p-button-padding-y) var(--p-button-padding-x);
-        cursor: pointer;
-    }
-}
-
-#user_account_overlay_dropdown_menu_list li:last-child>div>a {
-    padding-bottom: 0.75rem;
-}
-
 #logo {
-  width: 125px;
+  width: 100px;
   height: auto;
-}
-
-.phstr-app-dark #logo {
-  color: white;
 }
 </style>
