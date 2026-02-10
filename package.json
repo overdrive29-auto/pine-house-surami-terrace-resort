@@ -1,26 +1,39 @@
 {
-  "name": "pine-house-surami-terrace-resort",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@primevue/themes": "^4.5.4",
-    "primeicons": "^7.0.0",
-    "primevue": "^4.5.4",
-    "tailwindcss-primeui": "^0.6.1",
-    "vue": "^3.5.24",
-    "vue-i18n": "^10.0.8",
-    "vue-router": "^4.6.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "@vitejs/plugin-vue": "^6.0.1",
-    "tailwindcss": "^4.1.18",
-    "vite": "^7.2.4"
-  }
+	"name": "pine-house-surami-terrace-resort",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "eslint . --ext .js,.vue",
+		"lint:fix": "eslint . --ext .js,.vue --fix",
+		"format": "prettier --write \"src/**/*.{css,html,vue,js}\"",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"@primevue/themes": "^4.5.4",
+		"primeicons": "^7.0.0",
+		"primevue": "^4.5.4",
+		"tailwindcss-primeui": "^0.6.1",
+		"vue": "^3.5.24",
+		"vue-i18n": "^10.0.8",
+		"vue-router": "^4.6.4"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.12.0",
+		"@stylistic/eslint-plugin": "^1.8.1",
+		"@tailwindcss/vite": "^4.1.18",
+		"@vitejs/plugin-vue": "^6.0.1",
+		"eslint": "^9.12.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-vue": "^9.30.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.2.11",
+		"prettier": "^3.3.3",
+		"tailwindcss": "^4.1.18",
+		"vite": "^7.2.4",
+		"vue-eslint-parser": "^9.4.3"
+	}
 }
