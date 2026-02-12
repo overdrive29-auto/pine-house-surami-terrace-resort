@@ -61,7 +61,8 @@
 <style>
 	.flag-icon {
 		line-height: inherit !important;
-		filter: grayscale(25%);
+		/* filter: grayscale(25%); */
+		width: 1.5rem !important;
 	}
 
 	#language_menu {

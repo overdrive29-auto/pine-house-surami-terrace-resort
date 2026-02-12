@@ -1,51 +1,24 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-// Lazy-loaded route components (recommended)
+import Home from "../views/Home.vue";
+import About from "../views/About.vue";
+import Gallery from "../views/Gallery.vue";
+import Booking from "../views/Booking.vue";
+import Contact from "../views/Contact.vue";
+import NotFound from "../views/NotFound.vue";
+
 const routes = [
-	{
-		path: "/",
-		name: "home",
-		component: () => import("../views/Home.vue")
-	},
-	{
-		path: "/about",
-		name: "about",
-		component: () => import("../views/About.vue")
-	},
-	{
-		path: "/book",
-		name: "book",
-		component: () => import("../views/Book.vue")
-	},
-	{
-		path: "/contact",
-		name: "contact",
-		component: () => import("../views/Contact.vue")
-	},
-	{
-		path: "/gallery",
-		name: "gallery",
-		component: () => import("../views/Gallery.vue")
-	},
-	// Catch-all route (404 page)
-	{
-		path: "/:pathMatch(.*)*",
-		name: "not-found",
-		component: () => import("../views/NotFound.vue")
-	}
+	{ path: "/", name: "Home", component: Home },
+	{ path: "/about", name: "about", component: About },
+	{ path: "/gallery", name: "gallery", component: Gallery },
+	{ path: "/booking", name: "booking", component: Booking },
+	{ path: "/contact", name: "contact", component: Contact },
+	{ path: "/:pathMatch(.*)*", name: "not-found", component: NotFound }
 ];
 
 const router = createRouter({
-	// Use HTML5 history mode (clean URLs without #)
 	history: createWebHistory(import.meta.env.BASE_URL),
-	routes,
-	// Optional: smooth scrolling behavior when clicking links
-	scrollBehavior(to, from, savedPosition) {
-		if (savedPosition) {
-			return savedPosition;
-		}
-		return { top: 0 };
-	}
+	routes
 });
 
 export default router;

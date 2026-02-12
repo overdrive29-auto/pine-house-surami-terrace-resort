@@ -11,6 +11,21 @@ const messages = {
 			find_reservation: "Find reservation"
 		},
 		welcome: "Welcome to Pine House Surami Terrace Resort",
+		homepage: {
+			title: "Welcome!",
+			intro: "Experience the perfect blend of nature and comfort at Pine House Surami Terrace Resort. Nestled in the serene pine forests, our resort offers a tranquil escape with breathtaking views and fresh mountain air. Whether you're seeking adventure or relaxation, our resort provides the ideal setting for an unforgettable getaway."
+		},
+		contactpage: {
+			intro_1: "Relax in the heart of pine forests with fresh mountain air",
+			intro_2:
+				"Experience the perfect blend of nature and comfort at Pine House Surami Terrace Resort. Nestled in the serene pine forests, our resort offers a tranquil escape with breathtaking views and fresh mountain air. Whether you're seeking adventure or relaxation, our resort provides the ideal setting for an unforgettable getaway.",
+			title: "Contact us",
+			address: "26 მაისი 49ა , Surami, Georgia, 5700",
+			phone: "511 18 50 41",
+			whatsapp: "551 18 50 41",
+			facebook: "pinehousesurami",
+			email: "{'m.udzilauri@hotmail.com'}"
+		},
 		book_now: "Book Your Stay",
 		footer: {
 			copyright: "© {year} Pine House Surami Terrace Resort"
@@ -46,7 +61,22 @@ const messages = {
 			contact: "კონტაქტი",
 			find_reservation: "ჯავშანის ძიება"
 		},
-		welcome: "მოგესალმებით Pine House Surami Terrace Resort-ში",
+		welcome: "მოგესალმებით Pine House Surami & Terrace Resort",
+		homepage: {
+			title: "მოგესალმებით",
+			intro: "გაიხსენით ბუნებისა და კომფორტის იდეალური კომბინაცია Pine House Surami Terrace Resort-ში. განლაგებული მშვიდი ფიჭვის ტყეებში, ჩვენი კურორტი გთავაზობთ მშვიდ დასვენებას breath-taking ხედებით და სუფთა მთის ჰაერით. თუ ეძებთ თავგადასავალს ან დასვენებას, ჩვენი კურორტი უზრუნველყოფს იდეალურ გარემოს დაუვიწყარი დასვენებისთვის."
+		},
+		contactpage: {
+			intro_1: "დასვენება სუნთქვადი მთის ჰაერით სავსე ფიჭვის ტყეში",
+			intro_2:
+				"Experience the perfect blend of nature and comfort at Pine House Surami Terrace Resort. Nestled in the serene pine forests, our resort offers a tranquil escape with breathtaking views and fresh mountain air. Whether you're seeking adventure or relaxation, our resort provides the ideal setting for an unforgettable getaway.",
+			title: "დაგვიკავშირდით",
+			address: "26 მაისი 49ა , Surami, Georgia, 5700",
+			phone: "511 18 50 41",
+			whatsapp: "551 18 50 41",
+			facebook: "pinehousesurami",
+			email: "{'m.udzilauri@hotmail.com'}"
+		},
 		book_now: "დაჯავშნეთ თქვენი დარჩენა",
 		footer: {
 			copyright: "© {year} Pine House Surami Terrace Resort"

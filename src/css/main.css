@@ -4,50 +4,53 @@
 
 :root {
 	font-size: 14px;
-	--body-bg: var(--p-surface-50);
-	--card-bg: var(--p-surface-0);
-	--card-border: var(--p-surface-200);
-}
-
-:root[class="phstr-app-dark"] {
-	--body-bg: var(--p-surface-950);
-	--card-bg: var(--p-surface-900);
-	--card-border: var(--p-surface-700);
-}
-
-*,
-*:before,
-*:after {
-	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
-	box-sizing: inherit;
-}
-
-html {
-	height: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-body {
-	min-height: 100dvh;
-	font-family: "Open Sans", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
+
+	--body-bg: var(--p-surface-50);
+	--gradient-start: var(--p-primary-700);
+	--gradient-end: var(--p-primary-500);
+}
+
+:root[class="phstr-app-dark"] {
+	--body-bg: var(--p-surface-950);
+	--gradient-start: var(--p-primary-300);
+	--gradient-end: var(--p-primary-100);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
 	background-color: var(--body-bg);
 }
 
-.my-card {
-	background-color: var(--card-bg);
-	/* padding: 2rem; */
-	border: 1px solid var(--card-border);
-	/* border-radius: 12px; */
+*:focus-visible {
+	outline: none !important;
 }
 
-/* Page containers*/
+/* ----- PRIMEVUE OVERRIDES ----- */
+.p-button,
+.p-menubar,
+.p-card,
+.p-inputtext,
+.p-menu,
+.p-dialog,
+.p-toast,
+.p-galleria,
+.p-menubar .p-menubar-item-link,
+.p-menubar .p-menubar-item-content,
+.p-menubar-mobile .p-menubar-root-list,
+.p-menu .p-menu-item-content {
+	border-radius: 0 !important;
+}
+/* */
+
 #app {
 	min-height: 100dvh;
 	display: flex;
@@ -61,26 +64,12 @@ body {
 	flex: 0;
 }
 
-#home,
-#contact,
-#not_found {
+[id$="home"],
+[id$="about"],
+[id$="booking"],
+[id$="gallery"],
+[id$="contact"],
+[id$="not_found"] {
+	display: flex;
 	flex: 1;
-	border-radius: var(--p-border-radius-md);
-
-	user-select: none; /* Standard */
-	-webkit-user-select: none; /* Safari */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE/Edge */
-}
-/* Fonts */
-.open-sans-regular {
-	font-family: "Open Sans", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	font-variation-settings: "wdth" 100;
-}
-
-*:focus-visible {
-	outline: none !important;
 }

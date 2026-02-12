@@ -15,6 +15,10 @@ import Tooltip from "primevue/tooltip";
 import IconField from "primevue/iconfield";
 import InputIcon from "primevue/inputicon";
 import InputText from "primevue/inputtext";
+import Card from "primevue/card";
+import Galleria from "primevue/galleria";
+
+import DatePicker from "primevue/datepicker";
 
 import "primeicons/primeicons.css";
 
@@ -32,29 +36,6 @@ const MyPreset = definePreset(Aura, {
 			800: "{lime.800}",
 			900: "{lime.900}",
 			950: "{lime.950}"
-		},
-		colorScheme: {
-			light: {},
-			dark: {
-				surface: {}
-			}
-		}
-	},
-	components: {
-		menubar: {
-			root: {
-				// padding: '0.75rem 1rem',
-				// borderRadius: '0',
-			},
-
-			colorScheme: {
-				light: {
-					root: {}
-				},
-				dark: {
-					root: {}
-				}
-			}
 		}
 	}
 });
@@ -80,7 +61,10 @@ app.component("Button", Button)
 	.component("Menu", Menu)
 	.component("IconField", IconField)
 	.component("InputIcon", InputIcon)
-	.component("InputText", InputText);
+	.component("InputText", InputText)
+	.component("Card", Card)
+	.component("Galleria", Galleria)
+	.component("DatePicker", DatePicker);
 
 app.directive("ripple", Ripple).directive("tooltip", Tooltip);
 
