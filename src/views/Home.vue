@@ -5,7 +5,7 @@
 		>
 			<div class="container-2 flex flex-col lg:max-w-2xl lg:w-min flex-1 gap-2">
 				<Card style="display: none"></Card>
-				<div class="phastr-card flex-col flex-1 justify-center">
+				<div class="intro-section phastr-card flex-col flex-1 justify-center">
 					<h1
 						class="text-6xl max-w-100 bg-linear-to-r from-primary-600 to-primary-400 dark:from-primary-200 dark:to-primary-100 bg-clip-text text-transparent text-pretty whitespace-pre-line font-medium tracking-tighter"
 					>
@@ -17,7 +17,7 @@
 						{{ $t("homepage.intro") }}
 					</div>
 				</div>
-				<div class="phastr-card flex-1 p-0!">
+				<div class="gallery-section phastr-card p-0!">
 					<Galleria
 						:pt="{
 							root: { class: '!border-none !rounded-none' }
@@ -62,12 +62,12 @@
 				</div>
 			</div>
 			<div class="container-3 flex flex-col w-full flex-1 gap-2">
-				<div class="phastr-card flex-col flex-2 gap-0! p-0!">
+				<div class="about-section phastr-card flex-col flex-2 gap-0! p-0!">
 					<div
 						class="flex flex-row items-center gap-2 border-b border-surface-200 dark:border-surface-700 p-5"
 					>
 						<i class="pi pi-info-circle" style="font-size: 1.125rem"></i>
-						<h1 class="text-lg">შესახებ</h1>
+						<h1 class="text-lg">{{ $t("homepage.aboutsection.resort") }}</h1>
 					</div>
 
 					<div
@@ -77,21 +77,29 @@
 							class="flex flex-none lg:flex-col self-stretch items-center lg:justify-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 gap-2 p-4 lg:w-36"
 						>
 							<i class="pi pi-map" style="font-size: 1.5rem"></i>
-							<h1 class="text-lg">კურორტი</h1>
+							<h1 class="text-lg">{{ $t("homepage.aboutsection.resort") }}</h1>
 						</div>
 						<div class="flex flex-1 flex-wrap text-base gap-2 p-4">
-							<Chip label="ულამაზესი ბუნება და ხედები" icon="pi pi-sparkles" />
 							<Chip
-								label="კულტურული ღირსშესანიშნაეობები და ძეგლები"
-								icon="pi pi-building-columns"
+								:label="$t('homepage.aboutsection.resort_items.diverse_nature')"
+								icon="pi pi-sparkles"
 							/>
-
-							<Chip label="მშრალი სუბტროპიკული ჰავა" icon="pi pi-sparkles" />
 							<Chip
-								label="სამკურნალო სუფთა მთის ჰაერი და წყლები"
+								:label="
+									$t('homepage.aboutsection.resort_items.dry_subtropical_climate')
+								"
+								icon="pi pi-sparkles"
+							/>
+							<Chip
+								:label="
+									$t('homepage.aboutsection.resort_items.therapeutic_environment')
+								"
 								icon="pi pi-heart-fill"
 							/>
-							<Chip label="სამკურნალო, თერაპიული გარემო" icon="pi pi-heart-fill" />
+							<Chip
+								:label="$t('homepage.aboutsection.resort_items.ancient_monuments')"
+								icon="pi pi-building-columns"
+							/>
 						</div>
 					</div>
 					<div
@@ -101,59 +109,113 @@
 							class="flex flex-none lg:flex-col self-stretch items-center lg:justify-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 gap-2 p-4 lg:w-36"
 						>
 							<i class="pi pi-image" style="font-size: 1.5rem"></i>
-							<h1 class="text-lg">გარემოცვა</h1>
+							<h1 class="text-lg">{{ $t("homepage.aboutsection.environment") }}</h1>
 						</div>
 						<div class="flex flex-1 flex-wrap text-base gap-2 p-4">
-							<Chip label="წიწვოვანი ტყე" icon="pi pi-sparkles" />
-							<Chip label="სიწყნარე" icon="pi pi-face-smile" />
-							<Chip label="უფასო პარკინგი" icon="pi pi-car" />
-							<Chip label="კეთილმოწყობილი საკუთარი ეზო" icon="pi pi-sparkles" />
-							<Chip label="კარკასული აუზი" icon="pi pi-check-circle" />
+							<Chip
+								:label="
+									$t('homepage.aboutsection.environment_items.mountains_views')
+								"
+								icon="pi pi-sparkles"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.environment_items.pine_forest')"
+								icon="pi pi-sparkles"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.environment_items.peace_quiet')"
+								icon="pi pi-face-smile"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.environment_items.free_parking')"
+								icon="pi pi-car"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.environment_items.private_yard')"
+								icon="pi pi-sparkles"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.environment_items.pool')"
+								icon="pi pi-check-circle"
+							/>
 						</div>
 					</div>
 					<div
 						class="flex flex-col lg:flex-row flex-1 items-center border-b border-surface-200 dark:border-surface-700"
 					>
 						<div
-							id="three"
 							class="flex flex-none lg:flex-col self-stretch items-center lg:justify-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 gap-2 p-4 lg:w-36"
 						>
 							<i class="pi pi-home" style="font-size: 1.5rem"></i>
-							<h1 class="text-lg">კოტეჯი</h1>
+							<h1 class="text-lg">{{ $t("homepage.aboutsection.cottage") }}</h1>
 						</div>
 						<div class="flex flex-1 flex-wrap text-base gap-2 p-4">
-							<Chip label="ორი თანამედროვე კოტეჯი" icon="pi pi-home" />
-							<Chip label="ბალკონი ულამაზესი ხედით" icon="pi pi-sparkles" />
 							<Chip
-								label="აღჭურვილი ყველა
-							საჭირო ტექნიკით და ინვენტარით"
+								:label="$t('homepage.aboutsection.cottage_items.two_cottages')"
+								icon="pi pi-home"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.balcony_view')"
+								icon="pi pi-sparkles"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.full_comfort')"
 								icon="pi pi-star-fill"
 							/>
-							<Chip label="თანამედროვე ავეჯი და დეკორი" icon="pi pi-star-fill" />
-
-							<Chip label="3 იზოლირებული საძინებელი" icon="pi pi-check-circle" />
 							<Chip
-								label="სასტუმრო-სამზარეულოთი სრული კომფორტი"
-								icon="pi pi-face-smile"
+								:label="$t('homepage.aboutsection.cottage_items.fully_equipped')"
+								icon="pi pi-star-fill"
 							/>
-							<Chip label="ცენტრალური გათბობა" icon="pi pi-check-circle" />
-							<Chip label="კონდიციონერი" icon="pi pi-check-circle" />
-							<Chip label="სარეცხი და საშრობი მანქანა" icon="pi pi-check-circle" />
-							<Chip label="ტელევიზია" icon="pi pi-desktop" />
-							<Chip label="WiFi" icon="pi pi-wifi" />
-							<Chip label="ტევადობა 6-8 ადამიანი" icon="pi pi-user" />
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.modern_furniture')"
+								icon="pi pi-star-fill"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.three_bedrooms')"
+								icon="pi pi-check-circle"
+							/>
+							<Chip
+								:label="
+									$t('homepage.aboutsection.cottage_items.fully_equipped_kitchen')
+								"
+								icon="pi pi-check-circle"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.central_heating')"
+								icon="pi pi-check-circle"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.air_conditioning')"
+								icon="pi pi-check-circle"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.washer_dryer')"
+								icon="pi pi-check-circle"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.tv')"
+								icon="pi pi-desktop"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.wifi')"
+								icon="pi pi-wifi"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.cottage_items.capacity')"
+								icon="pi pi-user"
+							/>
 						</div>
 					</div>
 				</div>
 				<div class="container-4 flex flex-col lg:flex-row h-min gap-2">
 					<div
-						class="phastr-card flex-col flex-1 bg-linear-to-br! from-surface-100! to-surface-50! dark:from-surface-900! dark:to-surface-800! p-0!"
+						class="booking-section phastr-card flex-col flex-1 bg-linear-to-br! from-surface-100! to-surface-50! dark:from-surface-900! dark:to-surface-800! p-0!"
 					>
 						<div
 							class="flex flex-row items-center gap-2 p-5 border-b border-surface-200 dark:border-surface-700"
 						>
 							<i class="pi pi-calendar-clock" style="font-size: 1.125rem"></i>
-							<h1 class="text-lg">{{ $t("book_now") }}</h1>
+							<h1 class="text-lg">{{ $t("homepage.bookingsection.title") }}</h1>
 						</div>
 
 						<div class="flex flex-1 items-end gap-2 p-5">
@@ -162,57 +224,88 @@
 									v-model="dates"
 									selectionMode="range"
 									showIcon
-									:placeholder="$t('check_in_out')"
+									:placeholder="$t('homepage.bookingsection.check_in_out')"
 									class="w-full"
 									inputClass="w-full"
 								/>
 
 								<div class="grid grid-cols-2 gap-2">
-									<InputText :placeholder="$t('adults')" class="w-full" />
-									<InputText :placeholder="$t('children')" class="w-full" />
+									<InputText
+										:placeholder="$t('homepage.bookingsection.adults')"
+										class="w-full"
+									/>
+									<InputText
+										:placeholder="$t('homepage.bookingsection.children')"
+										class="w-full"
+									/>
 								</div>
 								<div class="flex flex-row justify-start gap-2 mt-2">
-									<strong class="text-base">Check-in</strong
+									<strong class="text-base">{{
+										$t("homepage.bookingsection.check_in")
+									}}</strong
 									><span class="text-base">3:00pm</span
-									><strong class="text-base">Check-out</strong
+									><strong class="text-base">{{
+										$t("homepage.bookingsection.check_out")
+									}}</strong
 									><span class="text-base">12:00pm</span>
 								</div>
 								<Button
-									:label="$t('check_availability')"
+									:label="$t('homepage.bookingsection.check_availability')"
 									severity="contrast"
 									class="w-full p-button-lg transition-all"
 								/>
 							</div>
 						</div>
 					</div>
-					<div class="phastr-card flex-col flex-1 p-0!">
+					<div class="contact-section phastr-card flex-col flex-1 p-0!">
 						<div
 							class="flex flex-row items-center gap-2 p-5 border-b border-surface-200 dark:border-surface-700"
 						>
 							<i class="pi pi-address-book" style="font-size: 1.125rem"></i>
-							<h1 class="text-lg">კონტაქტი</h1>
+							<h1 class="text-lg">{{ $t("homepage.contactsection.title") }}</h1>
 						</div>
 						<div class="flex flex-col flex-1 justify-end gap-2 p-5">
-							<div class="contact-item flex flex-row items-center gap-3">
+							<a
+								href="https://maps.google.com/?q=26+მაისი+49ა+Surami+Georgia+5700"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="contact-item flex flex-row items-center gap-3 no-underline text-color"
+							>
 								<i class="pi pi-map-marker" style="font-size: 1.5rem"></i>
-								<span>{{ $t("contactpage.address") }}</span>
-							</div>
-							<div class="contact-item flex flex-row items-center gap-3">
+								<span>{{ $t("homepage.contactsection.address") }}</span>
+							</a>
+							<a
+								href="mailto:m.udzilauri@hotmail.com"
+								class="contact-item flex flex-row items-center gap-3 no-underline text-color"
+							>
 								<i class="pi pi-envelope" style="font-size: 1.5rem"></i>
-								<span>{{ $t("contactpage.email") }}</span>
-							</div>
-							<div class="contact-item flex flex-row items-center gap-3">
+								<span>{{ $t("homepage.contactsection.email") }}</span>
+							</a>
+							<a
+								href="https://www.facebook.com/profile.php?id=61578309970699"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="contact-item flex flex-row items-center gap-3 no-underline text-color"
+							>
 								<i class="pi pi-facebook" style="font-size: 1.5rem"></i>
-								<span>{{ $t("contactpage.facebook") }}</span>
-							</div>
-							<div class="contact-item flex flex-row items-center gap-3">
+								<span>{{ $t("homepage.contactsection.facebook") }}</span>
+							</a>
+							<a
+								href="tel:+995511185041"
+								class="contact-item flex flex-row items-center gap-3 no-underline text-color"
+							>
 								<i class="pi pi-phone" style="font-size: 1.5rem"></i>
-								<span>{{ $t("contactpage.phone") }}</span>
-							</div>
-							<div class="contact-item flex flex-row items-center gap-3">
+								<span>{{ $t("homepage.contactsection.phone") }}</span>
+							</a>
+							<a
+								href="https://wa.me/995511185041"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="contact-item flex flex-row items-center gap-3 no-underline text-color"
+							>
 								<i class="pi pi-whatsapp" style="font-size: 1.5rem"></i>
-								<span>{{ $t("contactpage.whatsapp") }}</span>
-							</div>
+								<span>{{ $t("homepage.contactsection.whatsapp") }}</span>
+							</a>
 						</div>
 					</div>
 				</div>
