@@ -71,7 +71,7 @@
 					</div>
 
 					<div
-						class="flex flex-col lg:flex-row flex-1 items-center gap-2 border-b border-surface-200 dark:border-surface-700"
+						class="flex flex-col lg:flex-row flex-1 items-center border-b border-surface-200 dark:border-surface-700"
 					>
 						<div
 							class="flex flex-none lg:flex-col self-stretch items-center lg:justify-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 gap-2 p-4 lg:w-36"
@@ -95,7 +95,7 @@
 						</div>
 					</div>
 					<div
-						class="flex flex-col lg:flex-row flex-1 items-center gap-2 border-b border-surface-200 dark:border-surface-700"
+						class="flex flex-col lg:flex-row flex-1 items-center border-b border-surface-200 dark:border-surface-700"
 					>
 						<div
 							class="flex flex-none lg:flex-col self-stretch items-center lg:justify-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 gap-2 p-4 lg:w-36"
@@ -112,7 +112,7 @@
 						</div>
 					</div>
 					<div
-						class="flex flex-col lg:flex-row flex-1 items-center gap-2 border-b border-surface-200 dark:border-surface-700"
+						class="flex flex-col lg:flex-row flex-1 items-center border-b border-surface-200 dark:border-surface-700"
 					>
 						<div
 							id="three"
