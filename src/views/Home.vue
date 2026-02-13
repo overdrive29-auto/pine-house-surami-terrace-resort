@@ -79,7 +79,7 @@
 							<i class="pi pi-map" style="font-size: 1.5rem"></i>
 							<h1 class="text-lg">კურორტი</h1>
 						</div>
-						<div class="flex flex-1 flex-wrap text-sm gap-2 p-4">
+						<div class="flex flex-1 flex-wrap text-base gap-2 p-4">
 							<Chip label="ულამაზესი ბუნება და ხედები" icon="pi pi-sparkles" />
 							<Chip
 								label="კულტურული ღირსშესანიშნაეობები და ძეგლები"
@@ -103,7 +103,7 @@
 							<i class="pi pi-image" style="font-size: 1.5rem"></i>
 							<h1 class="text-lg">გარემოცვა</h1>
 						</div>
-						<div class="flex flex-1 flex-wrap text-sm gap-2 p-4">
+						<div class="flex flex-1 flex-wrap text-base gap-2 p-4">
 							<Chip label="წიწვოვანი ტყე" icon="pi pi-sparkles" />
 							<Chip label="სიწყნარე" icon="pi pi-face-smile" />
 							<Chip label="უფასო პარკინგი" icon="pi pi-car" />
@@ -121,7 +121,7 @@
 							<i class="pi pi-home" style="font-size: 1.5rem"></i>
 							<h1 class="text-lg">კოტეჯი</h1>
 						</div>
-						<div class="flex flex-1 flex-wrap text-sm gap-2 p-4">
+						<div class="flex flex-1 flex-wrap text-base gap-2 p-4">
 							<Chip label="ორი თანამედროვე კოტეჯი" icon="pi pi-home" />
 							<Chip label="ბალკონი ულამაზესი ხედით" icon="pi pi-sparkles" />
 							<Chip
@@ -157,7 +157,7 @@
 						</div>
 
 						<div class="flex flex-1 items-end gap-2 p-5">
-							<div class="space-y-2 flex-1">
+							<div class="space-y-3 flex-1">
 								<DatePicker
 									v-model="dates"
 									selectionMode="range"
@@ -171,7 +171,12 @@
 									<InputText :placeholder="$t('adults')" class="w-full" />
 									<InputText :placeholder="$t('children')" class="w-full" />
 								</div>
-
+								<div class="flex flex-row justify-start gap-2 mt-2">
+									<strong class="text-base">Check-in</strong
+									><span class="text-base">3:00pm</span
+									><strong class="text-base">Check-out</strong
+									><span class="text-base">12:00pm</span>
+								</div>
 								<Button
 									:label="$t('check_availability')"
 									severity="contrast"

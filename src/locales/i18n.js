@@ -60,7 +60,7 @@ const messages = {
 		check_availability: "გადაამოწმეთ ხელმისაწვდომობა",
 		adults: "მოზრდილები",
 		children: "ბავშვები",
-		check_in_out: "ჩექ-ინი — ჩექ-აუთი",
+		check_in_out: "Check-in — Check-out",
 		navlinks: {
 			home: "მთავარი",
 			about: "შესახებ",
