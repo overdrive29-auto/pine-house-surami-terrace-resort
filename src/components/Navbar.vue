@@ -161,6 +161,7 @@
 						<InputText
 							v-model="value1"
 							:placeholder="$t('navlinks.find_reservation')"
+							class="w-48"
 						/>
 					</IconField>
 					<LanguageSwitch />

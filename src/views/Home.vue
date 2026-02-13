@@ -3,7 +3,7 @@
 		<div
 			class="container-1 flex flex-col lg:flex-row w-full gap-2 bg-linear-to-br from-lime-600 to-lime-100 dark:from-lime-600 dark:to-lime-200"
 		>
-			<div class="container-2 flex flex-col flex-1 gap-2">
+			<div class="container-2 flex flex-col lg:max-w-xl lg:w-min flex-1 gap-2">
 				<Card style="display: none"></Card>
 				<div class="phastr-card flex-col flex-1 justify-center">
 					<h1
@@ -17,7 +17,7 @@
 						{{ $t("homepage.intro") }}
 					</div>
 				</div>
-				<div class="phastr-card border-0! p-0!">
+				<div class="phastr-card p-0!">
 					<Galleria
 						:pt="{
 							root: { class: '!border-none !rounded-none' }
@@ -27,7 +27,7 @@
 						:numVisible="4"
 						:showItemNavigators="true"
 						:showThumbnails="true"
-						containerClass="w-full"
+						containerClass="lg:max-w-xl"
 						:circular="true"
 						:autoPlay="true"
 						:transitionInterval="5000"
@@ -61,7 +61,7 @@
 					</Galleria>
 				</div>
 			</div>
-			<div class="container-3 flex flex-col flex-2 gap-2">
+			<div class="container-3 flex flex-col w-full flex-1 gap-2">
 				<div class="phastr-card flex-col flex-2 gap-0! p-0!">
 					<div
 						class="flex flex-row items-center gap-2 border-b border-surface-200 dark:border-surface-700 p-5"
@@ -101,9 +101,9 @@
 						<div class="flex flex-1"></div>
 					</div>
 				</div>
-				<div class="container-4 flex flex-col flex-1 lg:flex-row gap-2">
+				<div class="container-4 flex flex-col lg:flex-row h-min gap-2">
 					<div
-						class="phastr-card flex-col flex-1 bg-linear-to-br! from-surface-100! to-surface-0! dark:from-surface-900! dark:to-surface-800! p-0!"
+						class="phastr-card flex-col flex-1 bg-linear-to-br! from-surface-100! to-surface-50! dark:from-surface-900! dark:to-surface-800! p-0!"
 					>
 						<div
 							class="flex flex-row items-center gap-2 p-5 border-b border-surface-200 dark:border-surface-700"

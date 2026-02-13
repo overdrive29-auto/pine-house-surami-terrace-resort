@@ -63,7 +63,8 @@
 		padding: 1rem;
 	}
 
-	#navbar {
+	#navbar,
+	#footer {
 		display: flex;
 		flex: 0;
 	}
@@ -87,7 +88,7 @@
 		border-radius: 0;
 		box-shadow: var(--p-card-shadow);
 		padding: var(--p-card-body-padding);
-		gap: 2rem;
+		/* gap: 2rem; */
 
 		@variant dark {
 			border: 1px solid var(--p-menubar-border-color);
