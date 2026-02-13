@@ -11,7 +11,7 @@ const messages = {
 		},
 		homepage: {
 			title: "Pine House Surami &\n Terrace Resort",
-			intro: "We offer a stay in Surami, in two beautiful modern cottages.\n Surami is one of the best resorts in the world,\n known for its beneficial and healing properties for health, ancient history, and diverse nature and beautiful views.",
+			intro: "We offer a stay in Surami, in two beautiful modern cottages.\n Surami is one of the best resorts in the world,\n known for its beneficial and healing properties for health, ancient history, amazing nature, and beautiful views.",
 
 			aboutsection: {
 				resort: "Resort",
@@ -19,15 +19,16 @@ const messages = {
 				cottage: "Cottage",
 				// Resort items
 				resort_items: {
-					diverse_nature: "Diverse nature",
+					nature: "Amazing nature",
 					dry_subtropical_climate: "Dry subtropical climate",
 					therapeutic_environment: "Therapeutic environment, air, waters",
 					ancient_monuments: "Ancient cultural monuments and landmarks"
 				},
 				// Environment items
 				environment_items: {
-					mountains_views: "Mountains and beautiful views",
+					mountains: "Mountains",
 					pine_forest: "Pine forest",
+					views: "Beautiful views",
 					peace_quiet: "Peace and quiet",
 					free_parking: "Free parking",
 					private_yard: "Well-maintained private yard",
@@ -82,7 +83,7 @@ const messages = {
 		},
 		homepage: {
 			title: "Pine House Surami &\n Terrace Resort",
-			intro: "Мы предлагаем отдых в Сурами, в двух красивых современных коттеджах.\n Сурами - один из лучших курортов в мире,\n известный своими полезными и лечебными свойствами для здоровья, древней историей и разнообразной природой и красивыми видами.",
+			intro: "Мы предлагаем отдых в Сурами, в двух красивых современных коттеджах.\n Сурами - один из лучших курортов в мире,\n известный своими полезными и лечебными свойствами для здоровья, древней историей, удивительной природой и красивыми видами.",
 
 			aboutsection: {
 				resort: "Курорт",
@@ -90,15 +91,16 @@ const messages = {
 				cottage: "Коттедж",
 				// Resort items
 				resort_items: {
-					diverse_nature: "Разнообразная природа",
+					nature: "Удивительная природа",
 					dry_subtropical_climate: "Сухой субтропический климат",
 					therapeutic_environment: "Лечебная среда, воздух, воды",
 					ancient_monuments: "Древние культурные памятники и достопримечательности"
 				},
 				// Environment items
 				environment_items: {
-					mountains_views: "Горы и прекрасный вид",
+					mountains: "Горы",
 					pine_forest: "Хвойный лес",
+					views: "Прекрасные виды",
 					peace_quiet: "Тишина и покой",
 					free_parking: "Бесплатная парковка",
 					private_yard: "Благоустроенный частный двор",
@@ -155,7 +157,7 @@ const messages = {
 
 		homepage: {
 			title: "Pine House Surami &\n Terrace Resort",
-			intro: "გთავაზობთ დასვენებას სურამში, ორ ულამაზეს თანამედროვე კოტეჯში.\n სურამი მსოფლიოში ერთ-ერთი საუკეთესო კურორტია,\n გამორჩეულია ჯანმრთელობისთვის სასარგებლო და სამკურნალო თვისებებით, უძველესი ისტორიით და მრავალფეროვანი ბუნებითა და ულამაზესი ხედებით.",
+			intro: "გთავაზობთ დასვენებას სურამში, ორ ულამაზეს თანამედროვე კოტეჯში.\n სურამი მსოფლიოში ერთ-ერთი საუკეთესო კურორტია,\n გამორჩეულია ჯანმრთელობისთვის სასარგებლო და სამკურნალო თვისებებით, უძველესი ისტორიით, გასაოცარი ბუნებითა და ულამაზესი ხედებით.",
 
 			aboutsection: {
 				resort: "კურორტი",
@@ -163,15 +165,16 @@ const messages = {
 				cottage: "კოტეჯი",
 				// Resort items
 				resort_items: {
-					diverse_nature: "მრავალფეროვანი ბუნება",
+					nature: "გასაოცარი ბუნება",
 					dry_subtropical_climate: "მშრალი სუბტროპიკული ჰავა",
 					therapeutic_environment: "სამკურნალო, თერაპიული გარემო, ჰაერი, წყლები",
 					ancient_monuments: "უძველესი კულტურული ძეგლები და ღირსშესანიშნაობები"
 				},
 				// Environment items
 				environment_items: {
-					mountains_views: "მთები და ულამაზესი ხედი",
+					mountains: "მთები",
 					pine_forest: "წიწვოვანი ტყე",
+					views: "ულამაზესი ხედები",
 					peace_quiet: "სიწყნარე და სიმყუდროვე",
 					free_parking: "უფასო პარკინგი",
 					private_yard: "კეთილმოწყობილი კერძო ეზო",

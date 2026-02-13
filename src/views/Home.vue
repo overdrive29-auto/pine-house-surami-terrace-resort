@@ -81,7 +81,7 @@
 						</div>
 						<div class="flex flex-1 flex-wrap text-base gap-2 p-4">
 							<Chip
-								:label="$t('homepage.aboutsection.resort_items.diverse_nature')"
+								:label="$t('homepage.aboutsection.resort_items.nature')"
 								icon="pi pi-sparkles"
 							/>
 							<Chip
@@ -113,13 +113,15 @@
 						</div>
 						<div class="flex flex-1 flex-wrap text-base gap-2 p-4">
 							<Chip
-								:label="
-									$t('homepage.aboutsection.environment_items.mountains_views')
-								"
+								:label="$t('homepage.aboutsection.environment_items.mountains')"
 								icon="pi pi-sparkles"
 							/>
 							<Chip
 								:label="$t('homepage.aboutsection.environment_items.pine_forest')"
+								icon="pi pi-sparkles"
+							/>
+							<Chip
+								:label="$t('homepage.aboutsection.environment_items.views')"
 								icon="pi pi-sparkles"
 							/>
 							<Chip
