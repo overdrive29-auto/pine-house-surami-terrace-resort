@@ -2,6 +2,10 @@ import { createI18n } from "vue-i18n";
 
 const messages = {
 	en: {
+		check_availability: "Check Availability",
+		adults: "Adults",
+		children: "Children",
+		check_in_out: "Check-in — Check-out",
 		navlinks: {
 			home: "Home",
 			about: "About",
@@ -53,6 +57,10 @@ const messages = {
 	},
 
 	ka: {
+		check_availability: "გადაამოწმეთ ხელმისაწვდომობა",
+		adults: "მოზრდილები",
+		children: "ბავშვები",
+		check_in_out: "ჩექ-ინი — ჩექ-აუთი",
 		navlinks: {
 			home: "მთავარი",
 			about: "შესახებ",

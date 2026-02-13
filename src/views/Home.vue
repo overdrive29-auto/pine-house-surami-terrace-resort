@@ -1,166 +1,172 @@
 <template>
 	<div id="home">
 		<div
-			id="one"
-			class="flex flex-col w-full bg-linear-to-b from-lime-200 to-lime-100 lg:flex-row gap-4"
+			class="container-1 flex flex-col lg:flex-row w-full gap-2 bg-linear-to-br from-lime-600 to-lime-100 dark:from-lime-600 dark:to-lime-200"
 		>
-			<div id="two" class="flex flex-1 flex-col gap-4">
-				<Card class="flex flex-1">
-					<template #content>
-						<h1
-							class="text-6xl max-w-100 bg-linear-to-r from-primary-600 to-primary-400 dark:from-primary-200 dark:to-primary-100 bg-clip-text text-transparent text-pretty whitespace-pre-line font-medium tracking-tighter"
-						>
-							Pine House & Surami Terrace Resort
-						</h1>
-						<div
-							class="pt-2 text-surface-500 dark:text-surface-400 text-lg leading-tight whitespace-pre-line"
-						>
-							{{ $t("homepage.intro") }}
-						</div>
-					</template>
-				</Card>
-				<Card
-					class="flex"
-					:pt="{
-						body: { class: '!p-0' }
-					}"
-				>
-					<template #content>
-						<Galleria
-							:pt="{
-								root: { class: '!border-none !rounded-none' }
-							}"
-							:value="hotelImages"
-							:responsiveOptions="responsiveOptions"
-							:numVisible="4"
-							:showItemNavigators="true"
-							:showThumbnails="true"
-							containerClass="w-full"
-							:circular="true"
-							:autoPlay="true"
-							:transitionInterval="5000"
-						>
-							<template #item="slotProps">
-								<div
-									class="w-full aspect-[4/3] lg:aspect-[16/9]"
-									style="overflow: hidden"
-								>
-									<img
-										:src="slotProps.item.itemImageSrc"
-										:alt="slotProps.item.alt"
-										style="
-											width: 100%;
-											height: 100%;
-											object-fit: cover;
-											display: block;
-										"
-									/>
-								</div>
-							</template>
-							<template #thumbnail="slotProps">
-								<div class="px-1 aspect-[16/9]" style="overflow: hidden">
-									<img
-										:src="slotProps.item.thumbnailImageSrc"
-										:alt="slotProps.item.alt"
-										style="
-											width: calc(100%);
-											height: calc(100%);
-											object-fit: cover;
-										"
-									/>
-								</div>
-							</template>
-						</Galleria>
-					</template>
-				</Card>
-			</div>
-			<div id="three" class="flex flex-col flex-2 gap-4">
-				<Card class="flex flex-1">
-					<template #content>
-						<p>A</p>
-					</template></Card
-				>
-				<!-- <div id="3-1" class="flex gap-4 flex-col lg:flex-row">
-					<Card id="3-1-1" class="contact flex flex-1">
-						<template #content>
-							<p>gugugaga</p>
+			<div class="container-2 flex flex-col flex-1 gap-2">
+				<Card style="display: none"></Card>
+				<div class="phastr-card flex-col flex-1 justify-center">
+					<h1
+						class="text-6xl max-w-100 bg-linear-to-r from-primary-600 to-primary-400 dark:from-primary-200 dark:to-primary-100 bg-clip-text text-transparent text-pretty whitespace-pre-line font-medium tracking-tighter"
+					>
+						Pine House & Surami Terrace Resort
+					</h1>
+					<div
+						class="pt-2 text-surface-500 dark:text-surface-400 text-lg leading-tight whitespace-pre-line"
+					>
+						{{ $t("homepage.intro") }}
+					</div>
+				</div>
+				<div class="phastr-card border-0! p-0!">
+					<Galleria
+						:pt="{
+							root: { class: '!border-none !rounded-none' }
+						}"
+						:value="hotelImages"
+						:responsiveOptions="responsiveOptions"
+						:numVisible="4"
+						:showItemNavigators="true"
+						:showThumbnails="true"
+						containerClass="w-full"
+						:circular="true"
+						:autoPlay="true"
+						:transitionInterval="5000"
+					>
+						<template #item="slotProps">
+							<div
+								class="w-full aspect-[4/3] lg:aspect-[16/9]"
+								style="overflow: hidden"
+							>
+								<img
+									:src="slotProps.item.itemImageSrc"
+									:alt="slotProps.item.alt"
+									style="
+										width: 100%;
+										height: 100%;
+										object-fit: cover;
+										display: block;
+									"
+								/>
+							</div>
 						</template>
-					</Card>
-					<Card id="3-1-2" class="booking flex-1">
-						<template #content>
-							<h2 class="text-3xl font-bold mb-8 text-center">
-								{{ $t("book_now") }}
-							</h2>
+						<template #thumbnail="slotProps">
+							<div class="px-1 aspect-[16/9]" style="overflow: hidden">
+								<img
+									:src="slotProps.item.thumbnailImageSrc"
+									:alt="slotProps.item.alt"
+									style="width: calc(100%); height: calc(100%); object-fit: cover"
+								/>
+							</div>
+						</template>
+					</Galleria>
+				</div>
+			</div>
+			<div class="container-3 flex flex-col flex-2 gap-2">
+				<div class="phastr-card flex-col flex-2 gap-0! p-0!">
+					<div
+						class="flex flex-row items-center gap-2 border-b border-surface-200 dark:border-surface-700 p-5"
+					>
+						<i class="pi pi-info-circle" style="font-size: 1.125rem"></i>
+						<h1 class="text-lg">შესახებ</h1>
+					</div>
 
-							<div class="space-y-6">
+					<div
+						class="flex flex-col lg:flex-row flex-1 items-center gap-2 border-b border-surface-200 dark:border-surface-700"
+					>
+						<div
+							class="flex self-stretch items-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 p-5"
+						>
+							<i class="pi pi-map" style="font-size: 1.5rem"></i>
+						</div>
+						<div class="flex flex-1"></div>
+					</div>
+					<div
+						class="flex flex-col lg:flex-row flex-1 items-center gap-2 border-b border-surface-200 dark:border-surface-700"
+					>
+						<div
+							class="flex self-stretch items-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 p-5"
+						>
+							<i class="pi pi-image" style="font-size: 1.5rem"></i>
+						</div>
+						<div class="flex flex-1"></div>
+					</div>
+					<div
+						class="flex flex-col lg:flex-row flex-1 items-center gap-2 border-b border-surface-200 dark:border-surface-700"
+					>
+						<div
+							class="flex self-stretch items-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 p-5"
+						>
+							<i class="pi pi-home" style="font-size: 1.5rem"></i>
+						</div>
+						<div class="flex flex-1"></div>
+					</div>
+				</div>
+				<div class="container-4 flex flex-col flex-1 lg:flex-row gap-2">
+					<div
+						class="phastr-card flex-col flex-1 bg-linear-to-br! from-surface-100! to-surface-0! dark:from-surface-900! dark:to-surface-800! p-0!"
+					>
+						<div
+							class="flex flex-row items-center gap-2 p-5 border-b border-surface-200 dark:border-surface-700"
+						>
+							<i class="pi pi-calendar-clock" style="font-size: 1.125rem"></i>
+							<h1 class="text-lg">{{ $t("book_now") }}</h1>
+						</div>
+
+						<div class="flex flex-1 items-end gap-2 p-5">
+							<div class="space-y-2 flex-1">
 								<DatePicker
 									v-model="dates"
 									selectionMode="range"
 									showIcon
-									placeholder="Check-in — Check-out"
+									:placeholder="$t('check_in_out')"
 									class="w-full"
 									inputClass="w-full"
 								/>
 
-								<div class="grid grid-cols-2 gap-4">
-									<InputText placeholder="Adults" class="w-full" />
-									<InputText placeholder="Children" class="w-full" />
+								<div class="grid grid-cols-2 gap-2">
+									<InputText :placeholder="$t('adults')" class="w-full" />
+									<InputText :placeholder="$t('children')" class="w-full" />
 								</div>
 
-								<Button label="Check Availability" class="w-full p-button-lg" />
-							</div>
-						</template>
-					</Card>
-				</div>
-				<Card id="3-2" class="book flex flex-1">
-					<template #content>
-						<div class="px-6 md:px-12 lg:px-20 py-20">
-							<div class="flex flex-col gap-6 md:gap-10 lg:gap-10">
-								<div class="flex flex-col gap-4">
-									<div class="font-bold text-3xl leading-tight">
-										<span class="text-lime-500 dark:text-lime-200 raleway-title"
-											>Pine House & Surami Terrace Resort</span
-										>
-									</div>
-									<div class="font-bold text-3xl leading-tight">
-										<span class="text-surface-900 dark:text-surface-0">{{
-											$t("contactpage.title")
-										}}</span>
-									</div>
-									<div
-										class="text-surface-500 dark:text-surface-400 text-lg leading-tight whitespace-pre-line"
-									>
-										{{ $t("contactpage.intro_1") }}
-									</div>
-								</div>
-								<div
-									class="flex flex-col gap-4 text-surface-900 dark:text-surface-0 text-lg leading-tight"
-								>
-									<div class="flex flex-row items-center gap-4">
-										<i class="pi pi-map-marker" style="font-size: 1.5rem"></i>
-										<span>{{ $t("contactpage.address") }}</span>
-									</div>
-									<div class="flex flex-row items-center gap-4">
-										<i class="pi pi-phone" style="font-size: 1.5rem"></i>
-										<span>{{ $t("contactpage.phone") }}</span>
-									</div>
-									<div class="flex flex-row items-center gap-4">
-										<i class="pi pi-whatsapp" style="font-size: 1.5rem"></i>
-										<span>{{ $t("contactpage.whatsapp") }}</span>
-									</div>
-									<div class="flex flex-row items-center gap-4">
-										<i class="pi pi-facebook" style="font-size: 1.5rem"></i>
-										<span>{{ $t("contactpage.facebook") }}</span>
-									</div>
-									<div class="flex flex-row items-center gap-4">
-										<i class="pi pi-envelope" style="font-size: 1.5rem"></i>
-										<span>{{ $t("contactpage.email") }}</span>
-									</div>
-								</div>
+								<Button
+									:label="$t('check_availability')"
+									severity="contrast"
+									class="w-full p-button-lg transition-all"
+								/>
 							</div>
 						</div>
-					</template>
-				</Card> -->
+					</div>
+					<div class="phastr-card flex-col flex-1 p-0!">
+						<div
+							class="flex flex-row items-center gap-2 p-5 border-b border-surface-200 dark:border-surface-700"
+						>
+							<i class="pi pi-address-book" style="font-size: 1.125rem"></i>
+							<h1 class="text-lg">კონტაქტი</h1>
+						</div>
+						<div class="flex flex-col flex-1 justify-end gap-2 p-5">
+							<div class="contact-item flex flex-row items-center gap-3">
+								<i class="pi pi-map-marker" style="font-size: 1.5rem"></i>
+								<span>{{ $t("contactpage.address") }}</span>
+							</div>
+							<div class="contact-item flex flex-row items-center gap-3">
+								<i class="pi pi-envelope" style="font-size: 1.5rem"></i>
+								<span>{{ $t("contactpage.email") }}</span>
+							</div>
+							<div class="contact-item flex flex-row items-center gap-3">
+								<i class="pi pi-facebook" style="font-size: 1.5rem"></i>
+								<span>{{ $t("contactpage.facebook") }}</span>
+							</div>
+							<div class="contact-item flex flex-row items-center gap-3">
+								<i class="pi pi-phone" style="font-size: 1.5rem"></i>
+								<span>{{ $t("contactpage.phone") }}</span>
+							</div>
+							<div class="contact-item flex flex-row items-center gap-3">
+								<i class="pi pi-whatsapp" style="font-size: 1.5rem"></i>
+								<span>{{ $t("contactpage.whatsapp") }}</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -291,8 +297,4 @@
 		}
 	]);
 </script>
-<style scoped>
-	/* :deep(.p-galleria-thumbnail-items) {
-		gap: 4px;
-	} */
-</style>
+<style></style>

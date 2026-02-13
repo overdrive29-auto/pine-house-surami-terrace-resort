@@ -13,7 +13,7 @@
 						xmlns="http://www.w3.org/2000/svg"
 						xmlns:svg="http://www.w3.org/2000/svg"
 					>
-						<defs>
+						<!-- <defs>
 							<linearGradient
 								id="logo-gradient"
 								x1="0%"
@@ -25,10 +25,11 @@
 								<stop offset="0%" stop-color="var(--gradient-start)" />
 								<stop offset="100%" stop-color="var(--gradient-end)" />
 							</linearGradient>
-						</defs>
+						</defs> -->
+						<!-- stroke="url(#`logo-gradient`)" -->
 						<g
 							style="fill: none"
-							stroke="url(#logo-gradient)"
+							stroke="currentColor"
 							stroke-linecap="round"
 							stroke-linejoin="round"
 						>
@@ -184,30 +185,6 @@
 			icon: "pi pi-home",
 			route: "/",
 			disabled: false
-		},
-		{
-			label: "navlinks.about",
-			icon: "pi pi-info-circle",
-			route: "/about",
-			disabled: false
-		},
-		{
-			label: "navlinks.gallery",
-			icon: "pi pi-images",
-			route: "/gallery",
-			disabled: false
-		},
-		{
-			label: "navlinks.book",
-			icon: "pi pi-pen-to-square",
-			route: "/booking",
-			disabled: false
-		},
-		{
-			label: "navlinks.contact",
-			icon: "pi pi-envelope",
-			route: "/contact",
-			disabled: false
 		}
 	]);
 </script>
@@ -224,8 +201,8 @@
 			background: var(--p-primary-200);
 		}
 
-		.phstr-app-dark & .router-link-active,
-		.phstr-app-dark & .router-link-exact-active {
+		.phastr-app-dark & .router-link-active,
+		.phastr-app-dark & .router-link-exact-active {
 			background: var(--p-surface-800);
 		}
 

@@ -13,7 +13,7 @@
 	const appDark = ref(true);
 
 	function toggleDarkMode() {
-		document.documentElement.classList.toggle("phstr-app-dark");
+		document.documentElement.classList.toggle("phastr-app-dark");
 		appDark.value = !appDark.value;
 	}
 </script>

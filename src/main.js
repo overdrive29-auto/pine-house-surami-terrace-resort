@@ -20,6 +20,8 @@ import Galleria from "primevue/galleria";
 
 import DatePicker from "primevue/datepicker";
 
+import Chip from "primevue/chip";
+
 import "primeicons/primeicons.css";
 
 const MyPreset = definePreset(Aura, {
@@ -37,6 +39,45 @@ const MyPreset = definePreset(Aura, {
 			900: "{lime.900}",
 			950: "{lime.950}"
 		}
+	},
+	components: {
+		datepicker: {
+			colorScheme: {
+				light: {
+					date: {
+						selected: {
+							background: "{surface.700}",
+							color: "{surface.0}"
+						},
+						rangeSelected: {
+							background: "{surface.700}",
+							color: "{surface.0}"
+						}
+					}
+				},
+				dark: {
+					date: {
+						selected: {
+							background: "{surface.50}",
+							color: "{surface.900}"
+						},
+						rangeSelected: {
+							background: "{surface.50}",
+							color: "{surface.900}"
+						}
+					}
+				}
+			}
+		},
+		chip: {
+			root: {
+				padding: "0.75rem 1.25rem", // Default: 0.5rem 1rem
+				gap: "0.75rem" // Default: 0.5rem
+			},
+			icon: {
+				size: "1.5rem" // Default: 1rem
+			}
+		}
 	}
 });
 
@@ -48,7 +89,7 @@ app.use(PrimeVue, {
 		preset: MyPreset,
 		options: {
 			prefix: "p",
-			darkModeSelector: ".phstr-app-dark",
+			darkModeSelector: ".phastr-app-dark",
 			cssLayer: false
 		}
 	},
@@ -64,7 +105,8 @@ app.component("Button", Button)
 	.component("InputText", InputText)
 	.component("Card", Card)
 	.component("Galleria", Galleria)
-	.component("DatePicker", DatePicker);
+	.component("DatePicker", DatePicker)
+	.component("Chip", Chip);
 
 app.directive("ripple", Ripple).directive("tooltip", Tooltip);
 

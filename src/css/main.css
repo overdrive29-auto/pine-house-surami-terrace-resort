@@ -1,75 +1,96 @@
 @import "tailwindcss";
 @import "tailwindcss-primeui";
-@custom-variant dark (&:where(.phstr-app-dark, .phstr-app-dark *));
+@custom-variant dark (&:where(.phastr-app-dark, .phastr-app-dark *));
 
-:root {
-	font-size: 14px;
-	font-family: "Roboto", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	font-variation-settings: "wdth" 100;
+@layer base {
+	:root {
+		font-size: 14px;
+		font-family: "Roboto", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings: "wdth" 100;
 
-	--body-bg: var(--p-surface-50);
-	--gradient-start: var(--p-primary-700);
-	--gradient-end: var(--p-primary-500);
+		--body-bg: var(--p-surface-50);
+		--gradient-start: var(--p-primary-700);
+		--gradient-end: var(--p-primary-500);
+	}
+
+	:root[class="phastr-app-dark"] {
+		--body-bg: var(--p-surface-950);
+		--gradient-start: var(--p-primary-300);
+		--gradient-end: var(--p-primary-100);
+	}
+
+	html,
+	body {
+		height: 100%;
+	}
+
+	body {
+		background-color: var(--body-bg);
+	}
+
+	*:focus-visible {
+		outline: none !important;
+	}
 }
 
-:root[class="phstr-app-dark"] {
-	--body-bg: var(--p-surface-950);
-	--gradient-start: var(--p-primary-300);
-	--gradient-end: var(--p-primary-100);
+@layer primevue-overrides {
+	.p-button,
+	.p-menubar,
+	.p-card,
+	.p-inputtext,
+	.p-datepicker-dropdown,
+	.p-menu,
+	.p-dialog,
+	.p-toast,
+	.p-galleria,
+	.p-menubar .p-menubar-item-link,
+	.p-menubar .p-menubar-item-content,
+	.p-menubar-mobile .p-menubar-root-list,
+	.p-menu .p-menu-item-content {
+		border-radius: 0 !important;
+	}
 }
 
-html,
-body {
-	height: 100%;
+@layer layout {
+	#app {
+		min-height: 100dvh;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1rem;
+	}
+
+	#navbar {
+		display: flex;
+		flex: 0;
+	}
+
+	[id$="home"],
+	[id$="about"],
+	[id$="booking"],
+	[id$="gallery"],
+	[id$="contact"],
+	[id$="not_found"] {
+		display: flex;
+		flex: 1;
+	}
 }
 
-body {
-	background-color: var(--body-bg);
-}
+@layer components {
+	.phastr-card {
+		display: flex;
+		background: var(--p-card-background);
+		color: var(--p-card-color);
+		border-radius: 0;
+		box-shadow: var(--p-card-shadow);
+		padding: var(--p-card-body-padding);
+		gap: 2rem;
 
-*:focus-visible {
-	outline: none !important;
-}
-
-/* ----- PRIMEVUE OVERRIDES ----- */
-.p-button,
-.p-menubar,
-.p-card,
-.p-inputtext,
-.p-menu,
-.p-dialog,
-.p-toast,
-.p-galleria,
-.p-menubar .p-menubar-item-link,
-.p-menubar .p-menubar-item-content,
-.p-menubar-mobile .p-menubar-root-list,
-.p-menu .p-menu-item-content {
-	border-radius: 0 !important;
-}
-/* */
-
-#app {
-	min-height: 100dvh;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	padding: 1rem;
-}
-
-#navbar {
-	display: flex;
-	flex: 0;
-}
-
-[id$="home"],
-[id$="about"],
-[id$="booking"],
-[id$="gallery"],
-[id$="contact"],
-[id$="not_found"] {
-	display: flex;
-	flex: 1;
+		@variant dark {
+			border: 1px solid var(--p-menubar-border-color);
+		}
+	}
 }
