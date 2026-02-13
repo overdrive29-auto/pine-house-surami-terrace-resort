@@ -17,7 +17,7 @@ const messages = {
 		welcome: "Welcome to Pine House Surami Terrace Resort",
 		homepage: {
 			title: "Welcome!",
-			intro: "Experience the perfect blend of nature and comfort at Pine House Surami Terrace Resort. Nestled in the serene pine forests, our resort offers a tranquil escape with breathtaking views and fresh mountain air. Whether you're seeking adventure or relaxation, our resort provides the ideal setting for an unforgettable getaway."
+			intro: "Experience the perfect blend of nature and comfort at Pine House Surami Terrace Resort."
 		},
 		contactpage: {
 			intro_1: "Relax in the heart of pine forests with fresh mountain air",
@@ -72,7 +72,7 @@ const messages = {
 		welcome: "მოგესალმებით Pine House Surami & Terrace Resort",
 		homepage: {
 			title: "მოგესალმებით",
-			intro: "გაიხსენით ბუნებისა და კომფორტის იდეალური კომბინაცია Pine House Surami Terrace Resort-ში. განლაგებული მშვიდი ფიჭვის ტყეებში, ჩვენი კურორტი გთავაზობთ მშვიდ დასვენებას breath-taking ხედებით და სუფთა მთის ჰაერით. თუ ეძებთ თავგადასავალს ან დასვენებას, ჩვენი კურორტი უზრუნველყოფს იდეალურ გარემოს დაუვიწყარი დასვენებისთვის."
+			intro: "გთავაზობთ დასვენებას სურამში, ორ ულამაზეს თანამედროვე კოტეჯში, სურამი მსოფლიოში ერთ-ერთი საუკეთესო ადგილია ადამიანის კეთილდღეობისა და დასვენებისთვის, კურორტი გამორჩეულია ჯანმრთელობისთვის სასარგებლო და სამკურნალო თვისებებით, უძველესი ისტორიითა და ულამაზესი ბუნებით და ხედებით."
 		},
 		contactpage: {
 			intro_1: "დასვენება სუნთქვადი მთის ჰაერით სავსე ფიჭვის ტყეში",

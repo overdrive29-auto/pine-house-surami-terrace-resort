@@ -70,12 +70,37 @@ const MyPreset = definePreset(Aura, {
 			}
 		},
 		chip: {
-			root: {
-				padding: "0.75rem 1.25rem", // Default: 0.5rem 1rem
-				gap: "0.75rem" // Default: 0.5rem
-			},
-			icon: {
-				size: "1.5rem" // Default: 1rem
+			colorScheme: {
+				light: {
+					root: {
+						background: "{surface.100}", // or '{surface.200}'
+						color: "{surface.700}", // text color
+						padding: "0.75rem 1.25rem",
+						gap: "0.75rem"
+					},
+					icon: {
+						color: "{surface.700}", // icon color
+						size: "1.125rem"
+					},
+					removeIcon: {
+						color: "{surface.500}" // removable icon color
+					}
+				},
+				dark: {
+					root: {
+						background: "{surface.800}",
+						color: "{surface.100}",
+						padding: "0.75rem 1.25rem",
+						gap: "0.75rem"
+					},
+					icon: {
+						color: "{surface.100}",
+						size: "1.125rem"
+					},
+					removeIcon: {
+						color: "{surface.400}"
+					}
+				}
 			}
 		}
 	}

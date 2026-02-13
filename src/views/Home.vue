@@ -3,21 +3,21 @@
 		<div
 			class="container-1 flex flex-col lg:flex-row w-full gap-2 bg-linear-to-br from-lime-600 to-lime-100 dark:from-lime-600 dark:to-lime-200"
 		>
-			<div class="container-2 flex flex-col lg:max-w-xl lg:w-min flex-1 gap-2">
+			<div class="container-2 flex flex-col lg:max-w-2xl lg:w-min flex-1 gap-2">
 				<Card style="display: none"></Card>
 				<div class="phastr-card flex-col flex-1 justify-center">
 					<h1
 						class="text-6xl max-w-100 bg-linear-to-r from-primary-600 to-primary-400 dark:from-primary-200 dark:to-primary-100 bg-clip-text text-transparent text-pretty whitespace-pre-line font-medium tracking-tighter"
 					>
-						Pine House & Surami Terrace Resort
+						Pine House & <br />Surami Terrace Resort
 					</h1>
 					<div
-						class="pt-2 text-surface-500 dark:text-surface-400 text-lg leading-tight whitespace-pre-line"
+						class="pt-2 text-surface-600 dark:text-surface-200 text-lg leading-tight whitespace-pre-line"
 					>
 						{{ $t("homepage.intro") }}
 					</div>
 				</div>
-				<div class="phastr-card p-0!">
+				<div class="phastr-card flex-1 p-0!">
 					<Galleria
 						:pt="{
 							root: { class: '!border-none !rounded-none' }
@@ -27,7 +27,7 @@
 						:numVisible="4"
 						:showItemNavigators="true"
 						:showThumbnails="true"
-						containerClass="lg:max-w-xl"
+						containerClass="lg:max-w-2xl"
 						:circular="true"
 						:autoPlay="true"
 						:transitionInterval="5000"
@@ -74,31 +74,75 @@
 						class="flex flex-col lg:flex-row flex-1 items-center gap-2 border-b border-surface-200 dark:border-surface-700"
 					>
 						<div
-							class="flex self-stretch items-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 p-5"
+							class="flex flex-none lg:flex-col self-stretch items-center lg:justify-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 gap-2 p-4 lg:w-36"
 						>
 							<i class="pi pi-map" style="font-size: 1.5rem"></i>
+							<h1 class="text-lg">კურორტი</h1>
 						</div>
-						<div class="flex flex-1"></div>
+						<div class="flex flex-1 flex-wrap text-sm gap-2 p-4">
+							<Chip label="ულამაზესი ბუნება და ხედები" icon="pi pi-sparkles" />
+							<Chip
+								label="კულტურული ღირსშესანიშნაეობები და ძეგლები"
+								icon="pi pi-building-columns"
+							/>
+
+							<Chip label="მშრალი სუბტროპიკული ჰავა" icon="pi pi-sparkles" />
+							<Chip
+								label="სამკურნალო სუფთა მთის ჰაერი და წყლები"
+								icon="pi pi-heart-fill"
+							/>
+							<Chip label="სამკურნალო, თერაპიული გარემო" icon="pi pi-heart-fill" />
+						</div>
 					</div>
 					<div
 						class="flex flex-col lg:flex-row flex-1 items-center gap-2 border-b border-surface-200 dark:border-surface-700"
 					>
 						<div
-							class="flex self-stretch items-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 p-5"
+							class="flex flex-none lg:flex-col self-stretch items-center lg:justify-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 gap-2 p-4 lg:w-36"
 						>
 							<i class="pi pi-image" style="font-size: 1.5rem"></i>
+							<h1 class="text-lg">გარემოცვა</h1>
 						</div>
-						<div class="flex flex-1"></div>
+						<div class="flex flex-1 flex-wrap text-sm gap-2 p-4">
+							<Chip label="წიწვოვანი ტყე" icon="pi pi-sparkles" />
+							<Chip label="სიწყნარე" icon="pi pi-face-smile" />
+							<Chip label="უფასო პარკინგი" icon="pi pi-car" />
+							<Chip label="კეთილმოწყობილი საკუთარი ეზო" icon="pi pi-sparkles" />
+							<Chip label="კარკასული აუზი" icon="pi pi-check-circle" />
+						</div>
 					</div>
 					<div
 						class="flex flex-col lg:flex-row flex-1 items-center gap-2 border-b border-surface-200 dark:border-surface-700"
 					>
 						<div
-							class="flex self-stretch items-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 p-5"
+							id="three"
+							class="flex flex-none lg:flex-col self-stretch items-center lg:justify-center bg-surface-100 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700 gap-2 p-4 lg:w-36"
 						>
 							<i class="pi pi-home" style="font-size: 1.5rem"></i>
+							<h1 class="text-lg">კოტეჯი</h1>
 						</div>
-						<div class="flex flex-1"></div>
+						<div class="flex flex-1 flex-wrap text-sm gap-2 p-4">
+							<Chip label="ორი თანამედროვე კოტეჯი" icon="pi pi-home" />
+							<Chip label="ბალკონი ულამაზესი ხედით" icon="pi pi-sparkles" />
+							<Chip
+								label="აღჭურვილი ყველა
+							საჭირო ტექნიკით და ინვენტარით"
+								icon="pi pi-star-fill"
+							/>
+							<Chip label="თანამედროვე ავეჯი და დეკორი" icon="pi pi-star-fill" />
+
+							<Chip label="3 იზოლირებული საძინებელი" icon="pi pi-check-circle" />
+							<Chip
+								label="სასტუმრო-სამზარეულოთი სრული კომფორტი"
+								icon="pi pi-face-smile"
+							/>
+							<Chip label="ცენტრალური გათბობა" icon="pi pi-check-circle" />
+							<Chip label="კონდიციონერი" icon="pi pi-check-circle" />
+							<Chip label="სარეცხი და საშრობი მანქანა" icon="pi pi-check-circle" />
+							<Chip label="ტელევიზია" icon="pi pi-desktop" />
+							<Chip label="WiFi" icon="pi pi-wifi" />
+							<Chip label="ტევადობა 6-8 ადამიანი" icon="pi pi-user" />
+						</div>
 					</div>
 				</div>
 				<div class="container-4 flex flex-col lg:flex-row h-min gap-2">
