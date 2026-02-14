@@ -14,6 +14,7 @@ const messages = {
 			intro: "We offer a stay in Surami, in two beautiful modern cottages.\n Surami is one of the best resorts in the world,\n known for its beneficial and healing properties for health, ancient history, amazing nature, and beautiful views.",
 
 			aboutsection: {
+				title: "Information",
 				resort: "Resort",
 				environment: "Environment",
 				cottage: "Cottage",
@@ -86,6 +87,7 @@ const messages = {
 			intro: "Мы предлагаем отдых в Сурами, в двух красивых современных коттеджах.\n Сурами - один из лучших курортов в мире,\n известный своими полезными и лечебными свойствами для здоровья, древней историей, удивительной природой и красивыми видами.",
 
 			aboutsection: {
+				title: "Информация",
 				resort: "Курорт",
 				environment: "Окружение",
 				cottage: "Коттедж",
@@ -160,6 +162,7 @@ const messages = {
 			intro: "გთავაზობთ დასვენებას სურამში, ორ ულამაზეს თანამედროვე კოტეჯში.\n სურამი მსოფლიოში ერთ-ერთი საუკეთესო კურორტია,\n გამორჩეულია ჯანმრთელობისთვის სასარგებლო და სამკურნალო თვისებებით, უძველესი ისტორიით, გასაოცარი ბუნებითა და ულამაზესი ხედებით.",
 
 			aboutsection: {
+				title: "ინფორმაცია",
 				resort: "კურორტი",
 				environment: "გარემოცვა",
 				cottage: "კოტეჯი",

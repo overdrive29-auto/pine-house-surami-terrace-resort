@@ -67,7 +67,7 @@
 						class="flex flex-row items-center gap-2 border-b border-surface-200 dark:border-surface-700 p-5"
 					>
 						<i class="pi pi-info-circle" style="font-size: 1.125rem"></i>
-						<h1 class="text-lg">{{ $t("homepage.aboutsection.resort") }}</h1>
+						<h1 class="text-lg">{{ $t("homepage.aboutsection.title") }}</h1>
 					</div>
 
 					<div
