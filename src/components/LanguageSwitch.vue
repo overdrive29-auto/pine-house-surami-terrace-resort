@@ -23,6 +23,7 @@
 <script setup>
 	import { ref } from "vue";
 	import { useI18n } from "vue-i18n";
+	import { setAppLocale } from "@locales/i18n";
 
 	const { locale } = useI18n();
 
@@ -54,8 +55,7 @@
 	};
 
 	const selectLanguage = code => {
-		locale.value = code;
-		localStorage.setItem("preferredLanguage", code);
+		setAppLocale(code);
 	};
 </script>
 <style>

@@ -226,9 +226,32 @@ const messages = {
 	}
 };
 
+function detectUserLocale() {
+	const supportedLocales = ["en", "ka", "ru"];
+	const defaultLocale = "en";
+
+	// Check saved preference first
+	const savedLocale = localStorage.getItem("app-locale");
+	if (savedLocale && supportedLocales.includes(savedLocale)) {
+		return savedLocale;
+	}
+
+	// Check browser languages
+	const browserLanguages = navigator.languages || [navigator.language || navigator.userLanguage];
+
+	for (const lang of browserLanguages) {
+		const baseLocale = lang.split("-")[0];
+		if (supportedLocales.includes(baseLocale)) {
+			return baseLocale;
+		}
+	}
+
+	return defaultLocale;
+}
+
 const i18n = createI18n({
 	legacy: false,
-	locale: "ka",
+	locale: detectUserLocale(),
 	fallbackLocale: "en",
 
 	messages,
@@ -279,5 +302,12 @@ const i18n = createI18n({
 		}
 	}
 });
+
+export function setAppLocale(locale) {
+	i18n.global.locale.value = locale;
+	localStorage.setItem("app-locale", locale);
+	// Optional: Update HTML lang attribute
+	document.documentElement.lang = locale;
+}
 
 export default i18n;
