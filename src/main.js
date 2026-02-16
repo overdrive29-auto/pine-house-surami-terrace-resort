@@ -18,6 +18,8 @@ import InputText from "primevue/inputtext";
 import Card from "primevue/card";
 import Galleria from "primevue/galleria";
 
+import Drawer from "primevue/drawer";
+
 import DatePicker from "primevue/datepicker";
 
 import Chip from "primevue/chip";
@@ -131,7 +133,8 @@ app.component("Button", Button)
 	.component("Card", Card)
 	.component("Galleria", Galleria)
 	.component("DatePicker", DatePicker)
-	.component("Chip", Chip);
+	.component("Chip", Chip)
+	.component("Drawer", Drawer);
 
 app.directive("ripple", Ripple).directive("tooltip", Tooltip);
 

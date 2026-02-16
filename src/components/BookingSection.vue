@@ -21,15 +21,8 @@
 					inputClass="w-full"
 					@date-select="handleDateSelect"
 					@focus="handleFocus"
+					@update:model-value="checkAvailability"
 				/>
-
-				<div class="grid grid-cols-2 gap-2">
-					<InputText :placeholder="$t('homepage.bookingsection.adults')" class="w-full" />
-					<InputText
-						:placeholder="$t('homepage.bookingsection.children')"
-						class="w-full"
-					/>
-				</div>
 				<div class="flex flex-row justify-start gap-2 mt-2">
 					<strong class="text-base">{{ $t("homepage.bookingsection.check_in") }}</strong
 					><span class="text-base">3:00pm</span
@@ -40,14 +33,20 @@
 					:label="$t('homepage.bookingsection.check_availability')"
 					severity="contrast"
 					class="w-full p-button-lg transition-all"
+					:loading="checkingAvailability"
+					@click="bookingMenu = true"
 				/>
 			</div>
 		</div>
 	</div>
+	<BookingDrawer v-model:visible="bookingMenu" />
 </template>
 <script setup>
 	import { ref, computed } from "vue";
 	import { useDateRange } from "@/composables/useDateRange";
+	import BookingDrawer from "./BookingMenu.vue";
 
 	const { dates, showInvalid, handleDateSelect, handleFocus } = useDateRange();
+
+	const bookingMenu = ref(false);
 </script>
