@@ -34,19 +34,21 @@
 					severity="contrast"
 					class="w-full p-button-lg transition-all"
 					:loading="checkingAvailability"
-					@click="bookingMenu = true"
+					@click="onCheckAvailabilityClick"
 				/>
 			</div>
 		</div>
 	</div>
-	<BookingDrawer v-model:visible="bookingMenu" />
 </template>
 <script setup>
 	import { ref, computed } from "vue";
 	import { useDateRange } from "@/composables/useDateRange";
-	import BookingDrawer from "./BookingMenu.vue";
 
 	const { dates, showInvalid, handleDateSelect, handleFocus } = useDateRange();
 
-	const bookingMenu = ref(false);
+	const emit = defineEmits(["openBookingMenu"]);
+
+	const onCheckAvailabilityClick = data => {
+		emit("openBookingMenu", data);
+	};
 </script>

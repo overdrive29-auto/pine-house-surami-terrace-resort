@@ -59,8 +59,10 @@
 			background: var(--p-primary-200);
 		}
 
-		.phastr-app-dark .router-link-active {
-			background: var(--p-surface-800);
+		.phastr-app-dark & {
+			.router-link-active {
+				background: var(--p-surface-800);
+			}
 		}
 
 		.p-menubar-item.p-focus > .p-menubar-item-content {

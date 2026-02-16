@@ -11,19 +11,29 @@
 			<div class="container-3 flex gap-1 flex-col w-full flex-1">
 				<AboutSection></AboutSection>
 				<div class="container-4 flex flex-col lg:flex-row gap-1 h-min">
-					<BookingSection></BookingSection>
+					<BookingSection @openBookingMenu="handleOpenBookingMenu"></BookingSection>
 					<ContactSection></ContactSection>
 				</div>
 			</div>
 		</div>
+		<BookingDrawer v-model:visible="bookingMenu" />
 	</div>
 </template>
 
 <script setup>
-	import IntroSection from "../components/IntroSection.vue";
-	import GallerySection from "../components/GallerySection.vue";
-	import AboutSection from "../components/AboutSection.vue";
+	import { ref, computed } from "vue";
+
+	import IntroSection from "@/components/IntroSection.vue";
+	import GallerySection from "@/components/GallerySection.vue";
+	import AboutSection from "@/components/AboutSection.vue";
 	import BookingSection from "@/components/BookingSection.vue";
-	import ContactSection from "../components/ContactSection.vue";
+	import ContactSection from "@/components/ContactSection.vue";
+	import BookingDrawer from "@/components/BookingMenu.vue";
+
+	const bookingMenu = ref(false);
+
+	const handleOpenBookingMenu = data => {
+		bookingMenu.value = true;
+	};
 </script>
 <style></style>
