@@ -1,21 +1,22 @@
 <template>
 	<div id="home">
 		<div
-			class="container-1 flex flex-col lg:flex-row w-full gap-1 bg-linear-to-br from-lime-600 to-lime-100 dark:from-lime-600 dark:to-lime-200"
+			class="phastr-container grid gap-1 w-full min-h-0 grid-cols-1 lg:grid-cols-[1fr_2fr] bg-linear-to-br from-lime-600 to-lime-100 dark:from-lime-600 dark:to-lime-200"
 		>
-			<div class="container-2 flex flex-col lg:max-w-2xl lg:w-min flex-1 gap-1">
-				<Card style="display: none"></Card>
+			<div class="grid grid-rows-[1fr_auto] gap-1 min-h-0">
 				<IntroSection></IntroSection>
 				<GallerySection></GallerySection>
 			</div>
-			<div class="container-3 flex gap-1 flex-col w-full flex-1">
+
+			<div class="grid grid-rows-[1fr_auto] gap-1 min-h-0">
 				<AboutSection></AboutSection>
-				<div class="container-4 flex flex-col lg:flex-row gap-1 h-min">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-1">
 					<BookingSection @openBookingMenu="handleOpenBookingMenu"></BookingSection>
 					<ContactSection></ContactSection>
 				</div>
 			</div>
 		</div>
+		<Card style="display: none"></Card>
 		<BookingDrawer v-model:visible="bookingMenu" />
 	</div>
 </template>

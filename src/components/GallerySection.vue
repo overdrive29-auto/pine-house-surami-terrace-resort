@@ -1,5 +1,5 @@
 <template>
-	<div class="gallery-section phastr-card p-0!">
+	<div class="flex flex-col bg-surface-0 dark:bg-surface-900">
 		<Galleria
 			:pt="{
 				root: { class: '!border-none !rounded-none' }
@@ -9,7 +9,6 @@
 			:numVisible="4"
 			:showItemNavigators="true"
 			:showThumbnails="true"
-			containerClass="lg:max-w-2xl"
 			:circular="true"
 			:autoPlay="true"
 			:transitionInterval="5000"

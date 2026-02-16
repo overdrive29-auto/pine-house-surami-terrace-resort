@@ -81,18 +81,18 @@
 }
 
 @layer components {
-	.container-1 {
+	.phastr-container {
+		color: var(--p-surface-700);
+		box-shadow:
+			0 1px 3px 0 rgba(0, 0, 0, 0.1),
+			0 1px 2px -1px rgba(0, 0, 0, 0.1);
+
 		@variant dark {
-			border: 1px solid var(--p-menubar-border-color);
+			border: 1px solid var(--p-surface-700);
+			color: var(--p-surface-0);
 		}
 	}
-	.phastr-card {
-		display: flex;
-		background: var(--p-card-background);
-		color: var(--p-card-color);
-		border-radius: 0;
-		box-shadow: var(--p-card-shadow);
-		padding: var(--p-card-body-padding);
-		/* gap: 2rem; */
+	.phastr-section-header {
+		@apply flex flex-row items-center gap-2 p-4 border-b border-surface-200 dark:border-surface-700;
 	}
 }
