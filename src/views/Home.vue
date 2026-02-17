@@ -1,7 +1,7 @@
 <template>
 	<div id="home">
 		<div
-			class="phastr-container grid gap-1 lg:gap-px w-full min-h-0 grid-cols-1 lg:grid-cols-[1fr_2fr] bg-linear-to-br from-lime-600 to-lime-100 dark:from-lime-600 dark:to-lime-200"
+			class="phastr-container grid gap-1 lg:gap-px w-full min-h-0 grid-cols-1 lg:grid-cols-[1fr_2fr] bg-linear-to-br from-primary-600 to-primary-100 dark:from-primary-600 dark:to-primary-200"
 		>
 			<div class="grid grid-rows-[1fr_auto] gap-1 lg:gap-px min-h-0">
 				<IntroSection></IntroSection>
